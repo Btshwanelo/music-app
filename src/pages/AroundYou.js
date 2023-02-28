@@ -17,7 +17,7 @@ const CountryTracks = () => {
         'https://geo.ipify.org/api/v2/country?apiKey=at_yaazlGV2ymdSUP4u4WekLPOln8BbB&ipAddress=8.8.8.8',
       )
       .then((res) => setCountry(res?.data?.location.country))
-      .catch((err) => console.log(err))
+      .catch((err) => err)
       .finally(() => setLoading(false));
   }, [country]);
 
